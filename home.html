@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalSeat - Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .info-box {
+            width: 70%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GoalSeat</h1>
+
+        <div class="menu">
+            <a href="home.html">Home</a> |
+            <a href="login.html">Login</a> |
+            <a href="signup.html">Signup</a> |
+            <a href="about.html">About</a>
+        </div>
+    </header>
+
+    <div class="internal-menu">
+        <ol>
+            <li><a href="#ticketCategories">Go to Ticket Categories</a></li>
+            <li><a href="#matchTable">Go to Match Table</a></li>
+            <li><a href="#bookTicket">Go to Book Ticket</a></li>
+        </ol>
+    </div>
+
+    <div class="info-box">
+        <p>
+            This website is a simple football ticket booking website that helps users check match details
+            and request tickets easily. The user can view match names, dates, stadiums, and prices.
+            The goal of this website is to make it easier for football fans to organize their ticket booking.
+        </p>
+    </div>
+
+    <figure>
+        <img src="stadium.jpg" width="120" usemap="#aboutMap" alt="About Us">
+        <map name="aboutMap">
+            <area shape="rect" coords="0,0,120,120" href="about.html" alt="About">
+        </map>
+        <figcaption>Click Here</figcaption>
+    </figure>
+
+    <article id="ticketCategories">
+        <section>
+            <h3>Ticket Categories</h3>
+            <ul>
+                <li>VIP Tickets
+                    <ul>
+                        <li>Front Row</li>
+                        <li>Premium Lounge</li>
+                    </ul>
+                </li>
+                <li>Standard Tickets
+                    <ul>
+                        <li>Regular Seat</li>
+                        <li>Upper Stand</li>
+                    </ul>
+                </li>
+                <li>Economy Tickets</li>
+                <li>Family Section</li>
+            </ul>
+        </section>
+    </article>
+
+    <article id="matchTable">
+        <section>
+            <h3>Match Table</h3>
+
+            <table border="1">
+                <tr>
+                    <th>Match</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Al-Hilal vs Al-Nassr</td>
+                    <td>15 April</td>
+                    <td>150 SAR</td>
+                </tr>
+                <tr>
+                    <td>Al-Ahli vs Al-Ittihad</td>
+                    <td>20 April</td>
+                    <td>120 SAR</td>
+                </tr>
+            </table>
+        </section>
+    </article>
+
+    <article id="bookTicket">
+        <section>
+            <form class="form">
+                <fieldset>
+                    <legend>Book Your Ticket</legend>
+
+                    <label>Full Name:
+                        <input type="text" placeholder="Ahmed Ali">
+                    </label>
+                    <br><br>
+
+                    <label>Email:
+                        <input type="email" placeholder="example@gmail.com">
+                    </label>
+                    <br><br>
+
+                    <label>Select Match:
+                        <select>
+                            <option>Al-Hilal vs Al-Nassr</option>
+                            <option>Al-Ahli vs Al-Ittihad</option>
+                        </select>
+                    </label>
+                    <br><br>
+
+                    <label>Ticket Type:
+                        <select>
+                            <option>VIP</option>
+                            <option>Standard</option>
+                            <option>Economy</option>
+                        </select>
+                    </label>
+                    <br><br>
+
+                    <label>Number of Tickets:
+                        <input type="number" placeholder="2">
+                    </label>
+                    <br><br>
+
+                    <input type="submit" value="Book Ticket">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </form>
+        </section>
+    </article>
+
+    <article>
+        <form class="form">
+            <fieldset>
+                <legend>How was your booking experience?</legend>
+
+                <label><input type="radio" name="experience" value="excellent"> Excellent</label><br>
+                <label><input type="radio" name="experience" value="good"> Good</label><br>
+                <label><input type="radio" name="experience" value="average"> Average</label><br><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>What leagues do you follow?</legend>
+                <label><input type="checkbox" name="league" value="saudi"> Saudi League</label><br>
+                <label><input type="checkbox" name="league" value="premier"> Premier League</label><br>
+                <label><input type="checkbox" name="league" value="laliga"> La Liga</label><br>
+                <label><input type="checkbox" name="league" value="seriea"> Serie A</label><br>
+            </fieldset>
+        </form>
+    </article>
+
+    <footer>
+         GoalSeat
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
