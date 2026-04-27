@@ -2,70 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalSeat - About Us</title>
-    <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-=======
-
-    <style>
-        .about-box {
-            width: 85%;
-            margin: 40px auto;
-            background: #2b2b2b;
-            padding: 30px 20px;
-            border-radius: 10px;
-            border: 2px solid #888;
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-            color: lightblue;
-        }
-
-        /* Force ALL text inside to be light blue */
-        .about-box * {
-            color: lightblue;
-        }
-
-        .about-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .about-box p {
-            margin-bottom: 18px;
-            line-height: 1.6;
-        }
-
-        .about-box ul {
-            margin-left: 25px;
-            margin-bottom: 18px;
-        }
-
-        .about-thanks {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 25px;
-        }
-    </style>
->>>>>>> 622f4c43feda6d34ed7660130b276f4cdadb0859
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>GoalSeat</h1>
 
-        <div class="menu">
+        <nav class="menu">
             <a href="home.html">Home</a> |
             <a href="login.html">Login</a> |
             <a href="signup.html">Signup</a> |
             <a href="about.html">About</a>
-        </div>
+        </nav>
     </header>
 
-<<<<<<< HEAD
-    
+    <figure class="page-image-box">
+        <img class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="GoalSeat image">
+        <map name="aboutMap">
+            <area shape="rect" coords="0,0,320,180" href="about.html" alt="About Us">
+        </map>
+        <figcaption>Click the image to open About Us</figcaption>
+    </figure>
 
     <article>
-        <section class="about-box">
+        <section class="box">
             <h2>About Us</h2>
 
             <p>
@@ -88,39 +50,16 @@
                 Our goal is to make football ticket booking easier and more organized.
             </p>
 
-            <p class="about-thanks">
+            <button type="button" onclick="showTeamMessage()">Show Project Message</button>
+
+            <p id="teamMessage">
                 Thank you for using GoalSeat!
             </p>
         </section>
     </article>
-=======
-    <div class="about-box">
-        <h2>About Us</h2>
 
-        <p>
-            Welcome to GoalSeat (our CPIS-358 assignment)! We created this website in order to help our users easily browse football matches as well as request tickets to go watch the matches live, in a simple and smooth manner!
-        </p>
+    <footer>GoalSeat</footer>
 
-        <p>
-            Our goal is to provide a simple and clean interface that allows users to:
-        </p>
-
-        <ul>
-            <li>View all available football matches and their live scores</li>
-            <li>Check out ticket prices and categories</li>
-            <li>Help users buy tickets in the easiest way possible</li>
-            <li>Review match details clearly and efficiently all in one place</li>
-        </ul>
-
-        <p>
-            We believe that organizing football ticket information in one place helps users save time and makes the booking process a lot easier to understand and navigate through.
-        </p>
-
-        <p class="about-thanks">
-            Thank you for using GoalSeat!
-        </p>
-    </div>
->>>>>>> 622f4c43feda6d34ed7660130b276f4cdadb0859
-
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -1,17 +1,12 @@
 body {
     max-width: 1200px;
     margin: 0 auto;
-<<<<<<< HEAD
-    padding: 0;
-=======
     padding: 0 20px;
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
     font-family: Arial, sans-serif;
     background-color: #1f1f1f;
     color: white;
 }
 
-/* Header */
 header {
     text-align: center;
     margin-top: 20px;
@@ -19,25 +14,9 @@ header {
 
 header h1 {
     color: lightblue;
-<<<<<<< HEAD
+    text-shadow: 2px 2px 3px black;
 }
 
-/* Menu */
-.menu a {
-    color: white;
-    font-size: 14px;
-}
-
-/* Headings moved right */
-h3 {
-    color: lightblue;
-    margin-left: 40px;
-=======
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px black;
-}
-
-/* Menu */
 .menu {
     margin-bottom: 20px;
 }
@@ -50,142 +29,76 @@ h3 {
 }
 
 .menu a:hover {
+    color: lightblue;
     text-decoration: underline;
 }
 
-/* Headings */
 h2,
 h3 {
     color: lightblue;
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
 }
 
-/* Info box */
-.info-box {
-    width: 70%;
+.box {
+    width: 75%;
     margin: 20px auto;
-    padding: 15px;
+    padding: 18px;
     border: 1px solid black;
-    border-radius: 10px;
-    background-color: #2b2b2b;
-<<<<<<< HEAD
-    color: black;
-}
-
-/* Figure */
-figure {
-    border: 2px solid black;
-    padding: 5px;
-    width: fit-content;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 40px;
-    background-color: #2b2b2b;
-}
-
-/* Shadows */
-table,
-.info-box,
-figure {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* TABLE moved right */
-table {
-    width: fit-content;
-    margin-left: 60px;
-    border-collapse: collapse;
+    border-radius: 12px;
     background-color: #2b2b2b;
     color: white;
+    box-shadow: 4px 4px 12px black;
 }
 
-th,
-td {
-    border: 1px solid black;
-    padding: 8px;
-}
-
-/* LIST moved right */
-ul {
-    margin-left: 60px;
-    color: red;
-}
-
-ul li::marker {
-    color: black;
-}
-
-/* FORM */
-.form {
-    width: 95%;
-    margin: 15px auto;
-    background: #2b2b2b;
-    padding: 15px;
-    border-radius: 0;
-    border: 1px solid #444;
-    color: white;
-}
-
-/* Internal links */
-=======
-    color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Image boxes */
 .page-image-box {
-    width: 140px;
-    margin: 20px 40px;
+    width: 340px;
+    margin: 20px auto;
     padding: 8px;
     text-align: center;
     background-color: #2b2b2b;
     border: 2px solid black;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px black;
+    position: relative;
+    z-index: 2;
 }
 
 .page-image {
-    width: 120px;
-    height: 120px;
+    width: 320px;
+    height: 180px;
     display: block;
     margin: 0 auto;
+    border: 1px solid #555;
 }
 
-/* Internal menu */
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
+figcaption {
+    margin-top: 8px;
+    color: lightblue;
+    font-size: 14px;
+}
+
 .internal-menu ol {
-    list-style-position: inside;
-    padding: 0;
-    margin: 20px 0 10px 30px;
+    margin-left: 40px;
 }
 
 .internal-menu a {
-    font-size: 14px;
-    font-weight: bold;
     color: lightblue;
+    font-weight: bold;
 }
 
 .internal-menu a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
-<<<<<<< HEAD
-/* Articles shifted slightly */
 article {
-    margin-left: 30px;
-=======
-/* Articles */
-article {
-    margin-left: 30px;
     margin-bottom: 20px;
 }
 
-/* Table */
 table {
     border-collapse: collapse;
-    margin-left: 60px;
+    margin: 10px auto;
     background-color: #2b2b2b;
     color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 12px black;
 }
 
 th,
@@ -194,106 +107,55 @@ td {
     padding: 8px;
 }
 
-/* Lists */
+th {
+    color: lightblue;
+}
+
 ul {
-    margin-left: 60px;
+    margin-left: 40px;
 }
 
-/* Forms */
-.form {
-    width: 95%;
-    margin: 15px auto;
-    background: #2b2b2b;
-    padding: 15px;
-    border: 1px solid #444;
-    color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-}
-
-.form h3 {
-    margin-left: 0;
-}
-
-.form label {
+label {
     display: block;
-    margin-bottom: 10px;
-}
-
-/* Login and signup box */
-.box {
-    width: 85%;
-    margin: 40px auto;
-    background: #2b2b2b;
-    padding: 30px 20px;
-    border-radius: 10px;
-    border: 2px solid #888;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
     color: lightblue;
-    text-align: center;
+    margin-bottom: 5px;
 }
 
-.box * {
-    color: lightblue;
-}
-
-/* About box */
-.about-box {
-    width: 85%;
-    margin: 40px auto;
-    background: #2b2b2b;
-    padding: 30px 20px;
-    border-radius: 10px;
-    border: 2px solid #888;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    color: lightblue;
-}
-
-.about-box * {
-    color: lightblue;
-}
-
-.about-box ul {
-    margin-left: 25px;
-}
-
-.about-thanks {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 25px;
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
-}
-
-/* Inputs */
 input,
 select {
-<<<<<<< HEAD
-    padding: 4px;
-=======
     width: 250px;
     padding: 6px;
-    margin-top: 4px;
-    margin-bottom: 12px;
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
     background-color: #1f1f1f;
     color: white;
     border: 1px solid #555;
 }
 
-<<<<<<< HEAD
-/* Form headings */
-legend {
-    color: red;
-    font-weight: bold;
-=======
-input[type="submit"],
-input[type="reset"] {
-    width: auto;
-    cursor: pointer;
-    margin-right: 8px;
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
+input:focus {
+    background-color: #333333;
 }
 
-/* Footer */
+input[type="submit"],
+input[type="reset"],
+button {
+    width: auto;
+    padding: 7px 10px;
+    background-color: #1f1f1f;
+    color: lightblue;
+    border: 1px solid #555;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    color: white;
+    border: 1px solid lightblue;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
 footer {
     text-align: center;
     padding: 20px;

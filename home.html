@@ -2,95 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalSeat - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <style>
-<<<<<<< HEAD
-        .info-box {
+    <style type="text/css">
+        .home-note {
             width: 70%;
-            margin: 20px auto;
-            padding: 15px;
-            border: 1px solid black;
+            margin: 15px auto;
+            padding: 12px;
+            border: 1px solid lightblue;
             border-radius: 10px;
-            background-color: white;
-=======
-        .image-map-box {
-            position: relative;
-        }
-
-        .image-overlay {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            z-index: 2;
-            background-color: rgba(0, 0, 0, 0.75);
-            color: white;
-            padding: 4px 8px;
-            font-size: 12px;
-            border-radius: 4px;
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
+            text-align: center;
+            color: lightblue;
+            background-color: #2b2b2b;
         }
     </style>
 </head>
 <body>
 
     <header>
-<<<<<<< HEAD
         <h1>GoalSeat</h1>
-=======
-        <h1 style="letter-spacing: 1px;">GoalSeat</h1>
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
 
-        <div class="menu">
+        <nav class="menu">
             <a href="home.html">Home</a> |
             <a href="login.html">Login</a> |
             <a href="signup.html">Signup</a> |
             <a href="about.html">About</a>
-        </div>
+        </nav>
     </header>
 
-    <div class="internal-menu">
+    <p id="pageNote" class="home-note">Welcome to GoalSeat</p>
+
+    <figure class="page-image-box">
+        <img id="homeImage" class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="GoalSeat image">
+        <map name="aboutMap">
+            <area shape="rect" coords="0,0,320,180" href="about.html" alt="About Us">
+        </map>
+        <figcaption>Click the image to open About Us</figcaption>
+    </figure>
+
+    <nav class="internal-menu">
         <ol>
             <li><a href="#ticketCategories">Go to Ticket Categories</a></li>
             <li><a href="#matchTable">Go to Match Table</a></li>
             <li><a href="#bookTicket">Go to Book Ticket</a></li>
         </ol>
-    </div>
+    </nav>
 
-    <div class="info-box">
-        <p>
-            This website is a simple football ticket booking website that helps users check match details
-<<<<<<< HEAD
-            and request tickets easily. The user can view match names, dates, stadiums, and prices.
-=======
-            and request tickets easily, The user can view match names, dates, stadiums, and prices,
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
-            The goal of this website is to make it easier for football fans to organize their ticket booking.
-        </p>
-    </div>
+    <article>
+        <section class="box">
+            <h2>Project Idea</h2>
 
-<<<<<<< HEAD
-    <figure>
-        <img src="stadium.jpg" width="120" usemap="#aboutMap" alt="About Us">
-        <map name="aboutMap">
-            <area shape="rect" coords="0,0,120,120" href="about.html" alt="About">
-        </map>
-        <figcaption>Click Here</figcaption>
-=======
-    <figure class="page-image-box image-map-box">
-        <img src="AboutUs.png" width="120" height="120" usemap="#aboutMap" alt="Football project image" class="page-image">
-        <map name="aboutMap">
-            <area shape="rect" coords="0,0,120,120" href="about.html" alt="About Us">
-        </map>
-        <figcaption class="image-overlay">Go to About Us</figcaption>
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
-    </figure>
+            <p id="welcomeText">
+                GoalSeat is a simple football ticket booking website. It helps users view football matches,
+                ticket categories, dates, stadiums, and prices in one clear place.
+            </p>
+
+            <p>
+                The benefit of this project is to make ticket booking easier, faster, and more organized
+                for football fans.
+            </p>
+
+            <button type="button" onclick="changeTextAndImage()">Change Text and Image Style</button>
+            <button type="button" onclick="addDynamicElements()">Add Dynamic Elements</button>
+        </section>
+    </article>
+
+    <section id="dynamicArea" class="box">
+        <h3>JavaScript Dynamic Elements</h3>
+        <p>Click the button above to show website features.</p>
+    </section>
 
     <article id="ticketCategories">
-        <section>
+        <section class="box">
             <h3>Ticket Categories</h3>
+
             <ul>
                 <li>VIP Tickets
                     <ul>
@@ -111,157 +97,109 @@
     </article>
 
     <article id="matchTable">
-        <section>
+        <section class="box">
             <h3>Match Table</h3>
 
-<<<<<<< HEAD
-            <table border="1">
-=======
-            <table>
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
+            <table id="matchesTable">
                 <tr>
                     <th>Match</th>
                     <th>Date</th>
+                    <th>Stadium</th>
                     <th>Price</th>
                 </tr>
-                <tr>
+                <tr id="row1">
                     <td>Al-Hilal vs Al-Nassr</td>
                     <td>15 April</td>
+                    <td>Kingdom Arena</td>
                     <td>150 SAR</td>
                 </tr>
-                <tr>
+                <tr id="row2">
                     <td>Al-Ahli vs Al-Ittihad</td>
                     <td>20 April</td>
+                    <td>King Abdullah Stadium</td>
                     <td>120 SAR</td>
                 </tr>
             </table>
+
+            <p>
+                <button type="button" onclick="highlightTable()">Highlight Table </button>
+            </p>
         </section>
     </article>
 
     <article id="bookTicket">
-        <section>
-<<<<<<< HEAD
-            <form class="form">
-                <fieldset>
-                    <legend>Book Your Ticket</legend>
+        <section class="box">
+            <h3>Book Your Ticket</h3>
 
-                    <label>Full Name:
-                        <input type="text" placeholder="Ahmed Ali">
-                    </label>
-                    <br><br>
+            <form onsubmit="return validateBooking()">
+                <p>
+                    <label for="bookingName">Full Name:</label>
+                    <input type="text" id="bookingName" placeholder="Ahmed Ali">
+                </p>
 
-                    <label>Email:
-                        <input type="email" placeholder="example@gmail.com">
-                    </label>
-                    <br><br>
+                <p>
+                    <label for="bookingEmail">Email:</label>
+                    <input type="email" id="bookingEmail" placeholder="example@gmail.com">
+                </p>
 
-                    <label>Select Match:
-                        <select>
-                            <option>Al-Hilal vs Al-Nassr</option>
-                            <option>Al-Ahli vs Al-Ittihad</option>
-                        </select>
-                    </label>
-                    <br><br>
+                <p>
+                    <label for="bookingMatch">Select Match:</label>
+                    <select id="bookingMatch">
+                        <option value="Al-Hilal vs Al-Nassr">Al-Hilal vs Al-Nassr</option>
+                        <option value="Al-Ahli vs Al-Ittihad">Al-Ahli vs Al-Ittihad</option>
+                    </select>
+                </p>
 
-                    <label>Ticket Type:
-                        <select>
-                            <option>VIP</option>
-                            <option>Standard</option>
-                            <option>Economy</option>
-                        </select>
-                    </label>
-                    <br><br>
+                <p>
+                    <label for="ticketType">Ticket Type:</label>
+                    <select id="ticketType">
+                        <option value="VIP">VIP</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Economy">Economy</option>
+                    </select>
+                </p>
 
-                    <label>Number of Tickets:
-                        <input type="number" placeholder="2">
-                    </label>
-                    <br><br>
+                <p>
+                    <label for="ticketNumber">Number of Tickets:</label>
+                    <input type="number" id="ticketNumber" placeholder="2">
+                </p>
 
+                <p>
                     <input type="submit" value="Book Ticket">
                     <input type="reset" value="Reset">
-                </fieldset>
-=======
-            <form class="form" action="#" method="post">
-                <h3>Book Your Ticket</h3>
-
-                <label for="bookName">Full Name:</label>
-                <input type="text" id="bookName" name="bookName" placeholder="Ahmed Ali">
-
-                <label for="bookEmail">Email:</label>
-                <input type="email" id="bookEmail" name="bookEmail" placeholder="example@gmail.com">
-
-                <label for="bookMatch">Select Match:</label>
-                <select id="bookMatch" name="bookMatch">
-                    <option>Al-Hilal vs Al-Nassr</option>
-                    <option>Al-Ahli vs Al-Ittihad</option>
-                </select>
-
-                <label for="ticketType">Ticket Type:</label>
-                <select id="ticketType" name="ticketType">
-                    <option>VIP</option>
-                    <option>Standard</option>
-                    <option>Economy</option>
-                </select>
-
-                <label for="ticketNumber">Number of Tickets:</label>
-                <input type="number" id="ticketNumber" name="ticketNumber" placeholder="2">
-
-                <br>
-                <input type="submit" value="Book Ticket">
-                <input type="reset" value="Reset">
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
+                </p>
             </form>
+
+            <p id="ticketSummary"></p>
         </section>
     </article>
 
     <article>
-<<<<<<< HEAD
-        <form class="form">
-            <fieldset>
-                <legend>How was your booking experience?</legend>
+        <section class="box">
+            <h3>Feedback</h3>
 
-                <label><input type="radio" name="experience" value="excellent"> Excellent</label><br>
-                <label><input type="radio" name="experience" value="good"> Good</label><br>
-                <label><input type="radio" name="experience" value="average"> Average</label><br><br>
-            </fieldset>
+            <form>
+                <p>How was your booking experience?</p>
 
-            <br>
+                <p><input type="radio" name="experience" value="excellent"> Excellent</p>
+                <p><input type="radio" name="experience" value="good"> Good</p>
+                <p><input type="radio" name="experience" value="average"> Average</p>
 
-            <fieldset>
-                <legend>What leagues do you follow?</legend>
-                <label><input type="checkbox" name="league" value="saudi"> Saudi League</label><br>
-                <label><input type="checkbox" name="league" value="premier"> Premier League</label><br>
-                <label><input type="checkbox" name="league" value="laliga"> La Liga</label><br>
-                <label><input type="checkbox" name="league" value="seriea"> Serie A</label><br>
-            </fieldset>
-        </form>
-    </article>
+                <p>What leagues do you follow?</p>
 
-    <footer>
-         GoalSeat
-=======
-        <section>
-            <form class="form" action="#" method="post">
-                <h3>How was your booking experience?</h3>
-
-                <label><input type="radio" name="experience" value="excellent"> Excellent</label>
-                <label><input type="radio" name="experience" value="good"> Good</label>
-                <label><input type="radio" name="experience" value="average"> Average</label>
-
-                <h3>What leagues do you follow?</h3>
-                <label><input type="checkbox" name="league" value="saudi"> Saudi League</label>
-                <label><input type="checkbox" name="league" value="premier"> Premier League</label>
-                <label><input type="checkbox" name="league" value="laliga"> La Liga</label>
-                <label><input type="checkbox" name="league" value="seriea"> Serie A</label>
+                <p><input type="checkbox" name="league" value="saudi"> Saudi League</p>
+                <p><input type="checkbox" name="league" value="premier"> Premier League</p>
+                <p><input type="checkbox" name="league" value="laliga"> La Liga</p>
             </form>
         </section>
     </article>
 
-    <footer>
-        GoalSeat
->>>>>>> 50ae36d94e206e2c6ada8ee14a3cd2ad70f67d46
-    </footer>
+    <footer style="border-top: 1px solid #444;">GoalSeat</footer>
 
-    <script src="script.js"></script>
+    <script type="text/javascript">
+        document.getElementById("pageNote").innerHTML = "GoalSeat uses JavaScript for validation and dynamic content.";
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
