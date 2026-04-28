@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalSeat - Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-    <style type="text/css">
+    <style>
         .home-note {
             width: 70%;
             margin: 15px auto;
             padding: 12px;
             border: 1px solid lightblue;
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
             color: lightblue;
             background-color: #2b2b2b;
@@ -23,58 +24,57 @@
     <header>
         <h1>GoalSeat</h1>
 
-        <nav class="menu">
+        <div class="menu">
             <a href="home.html">Home</a> |
             <a href="login.html">Login</a> |
             <a href="signup.html">Signup</a> |
             <a href="about.html">About</a>
-        </nav>
+        </div>
     </header>
 
-    <p id="pageNote" class="home-note">Welcome to GoalSeat</p>
+    <p id="pageNote" class="home-note">Find your match, choose your seat, and book with confidence.</p>
 
     <figure class="page-image-box">
-        <img id="homeImage" class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="GoalSeat image">
+        <a href="about.html">
+            <img id="homeImage" class="page-image" src="main-image.png" usemap="#aboutMap" alt="GoalSeat football ticket booking image">
+        </a>
+
         <map name="aboutMap">
-            <area shape="rect" coords="0,0,320,180" href="about.html" alt="About Us">
+            <area shape="rect" coords="0,0,640,360" href="about.html" alt="About GoalSeat">
         </map>
-        <figcaption>Click the image to open About Us</figcaption>
     </figure>
 
-    <nav class="internal-menu">
+    <div class="internal-menu">
         <ol>
             <li><a href="#ticketCategories">Go to Ticket Categories</a></li>
             <li><a href="#matchTable">Go to Match Table</a></li>
             <li><a href="#bookTicket">Go to Book Ticket</a></li>
         </ol>
-    </nav>
+    </div>
 
     <article>
-        <section class="box">
+        <section class="info-box">
             <h2>Project Idea</h2>
 
             <p id="welcomeText">
-                GoalSeat is a simple football ticket booking website. It helps users view football matches,
-                ticket categories, dates, stadiums, and prices in one clear place.
+                GoalSeat is an online football ticket booking website that helps fans find matches,
+                compare ticket categories, and request tickets in a simple way.
             </p>
 
             <p>
-                The benefit of this project is to make ticket booking easier, faster, and more organized
-                for football fans.
+                The website saves time by showing match details, stadium names, ticket prices,
+                and booking options in one organized place.
             </p>
 
-            <button type="button" onclick="changeTextAndImage()">Change Text and Image Style</button>
-            <button type="button" onclick="addDynamicElements()">Add Dynamic Elements</button>
+            <button type="button" onclick="showAboutImage()">Learn More</button>
+            <button type="button" onclick="addDynamicFeatures()">Show Website Features</button>
         </section>
     </article>
 
-    <section id="dynamicArea" class="box">
-        <h3>JavaScript Dynamic Elements</h3>
-        <p>Click the button above to show website features.</p>
-    </section>
+    <div id="dynamicArea" class="dynamic-box" style="display: none;"></div>
 
     <article id="ticketCategories">
-        <section class="box">
+        <section>
             <h3>Ticket Categories</h3>
 
             <ul>
@@ -97,8 +97,8 @@
     </article>
 
     <article id="matchTable">
-        <section class="box">
-            <h3>Match Table</h3>
+        <section>
+            <h3>Available Matches</h3>
 
             <table id="matchesTable">
                 <tr>
@@ -107,13 +107,13 @@
                     <th>Stadium</th>
                     <th>Price</th>
                 </tr>
-                <tr id="row1">
+                <tr>
                     <td>Al-Hilal vs Al-Nassr</td>
                     <td>15 April</td>
                     <td>Kingdom Arena</td>
                     <td>150 SAR</td>
                 </tr>
-                <tr id="row2">
+                <tr>
                     <td>Al-Ahli vs Al-Ittihad</td>
                     <td>20 April</td>
                     <td>King Abdullah Stadium</td>
@@ -121,85 +121,80 @@
                 </tr>
             </table>
 
-            <p>
-                <button type="button" onclick="highlightTable()">Highlight Table </button>
-            </p>
+            <br>
+
+            <button type="button" onclick="highlightTable()">Highlight Available Matches</button>
         </section>
     </article>
 
     <article id="bookTicket">
-        <section class="box">
-            <h3>Book Your Ticket</h3>
+        <section>
+            <form class="form" onsubmit="return validateBooking()">
+                <fieldset>
+                    <legend>Book Your Ticket</legend>
 
-            <form onsubmit="return validateBooking()">
-                <p>
                     <label for="bookingName">Full Name:</label>
                     <input type="text" id="bookingName" placeholder="Ahmed Ali">
-                </p>
 
-                <p>
                     <label for="bookingEmail">Email:</label>
                     <input type="email" id="bookingEmail" placeholder="example@gmail.com">
-                </p>
 
-                <p>
                     <label for="bookingMatch">Select Match:</label>
                     <select id="bookingMatch">
                         <option value="Al-Hilal vs Al-Nassr">Al-Hilal vs Al-Nassr</option>
                         <option value="Al-Ahli vs Al-Ittihad">Al-Ahli vs Al-Ittihad</option>
                     </select>
-                </p>
 
-                <p>
                     <label for="ticketType">Ticket Type:</label>
                     <select id="ticketType">
                         <option value="VIP">VIP</option>
                         <option value="Standard">Standard</option>
                         <option value="Economy">Economy</option>
                     </select>
-                </p>
 
-                <p>
                     <label for="ticketNumber">Number of Tickets:</label>
-                    <input type="number" id="ticketNumber" placeholder="2">
-                </p>
+                    <input type="number" id="ticketNumber" placeholder="2" min="1">
 
-                <p>
                     <input type="submit" value="Book Ticket">
                     <input type="reset" value="Reset">
-                </p>
+                </fieldset>
             </form>
 
-            <p id="ticketSummary"></p>
+            <div id="ticketSummary" class="summary-box"></div>
         </section>
     </article>
 
     <article>
-        <section class="box">
-            <h3>Feedback</h3>
+        <section>
+            <form class="form">
+                <fieldset>
+                    <legend>How was your booking experience?</legend>
 
-            <form>
-                <p>How was your booking experience?</p>
+                    <label class="small-input"><input type="radio" name="experience" value="excellent"> Excellent</label>
+                    <label class="small-input"><input type="radio" name="experience" value="good"> Good</label>
+                    <label class="small-input"><input type="radio" name="experience" value="average"> Average</label>
+                </fieldset>
 
-                <p><input type="radio" name="experience" value="excellent"> Excellent</p>
-                <p><input type="radio" name="experience" value="good"> Good</p>
-                <p><input type="radio" name="experience" value="average"> Average</p>
+                <br>
 
-                <p>What leagues do you follow?</p>
+                <fieldset>
+                    <legend>What leagues do you follow?</legend>
 
-                <p><input type="checkbox" name="league" value="saudi"> Saudi League</p>
-                <p><input type="checkbox" name="league" value="premier"> Premier League</p>
-                <p><input type="checkbox" name="league" value="laliga"> La Liga</p>
+                    <label class="small-input"><input type="checkbox" name="league" value="saudi"> Saudi League</label>
+                    <label class="small-input"><input type="checkbox" name="league" value="premier"> Premier League</label>
+                    <label class="small-input"><input type="checkbox" name="league" value="laliga"> La Liga</label>
+                    <label class="small-input"><input type="checkbox" name="league" value="seriea"> Serie A</label>
+                </fieldset>
             </form>
         </section>
     </article>
 
     <footer style="border-top: 1px solid #444;">GoalSeat</footer>
 
-    <script type="text/javascript">
-        document.getElementById("pageNote").innerHTML = "GoalSeat uses JavaScript for validation and dynamic content.";
+    <script>
+        document.getElementById("pageNote").innerHTML = "Find your match, choose your seat, and book with confidence.";
     </script>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

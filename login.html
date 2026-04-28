@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalSeat - Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-    <style type="text/css">
-        .login-title {
+    <style>
+        .box {
+            width: 85%;
+            margin: 40px auto;
+            background: #2b2b2b;
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: 2px solid #888;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
             color: lightblue;
             text-align: center;
+        }
+
+        .box * {
+            color: lightblue;
         }
     </style>
 </head>
@@ -17,49 +29,42 @@
     <header>
         <h1>GoalSeat</h1>
 
-        <nav class="menu">
+        <div class="menu">
             <a href="home.html">Home</a> |
             <a href="login.html">Login</a> |
             <a href="signup.html">Signup</a> |
             <a href="about.html">About</a>
-        </nav>
+        </div>
     </header>
 
     <figure class="page-image-box">
-        <img class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="GoalSeat image">
+        <a href="about.html">
+            <img class="page-image" src="main-image.png" usemap="#aboutMap" alt="GoalSeat image">
+        </a>
+
         <map name="aboutMap">
-            <area shape="rect" coords="0,0,320,180" href="about.html" alt="About Us">
+            <area shape="rect" coords="0,0,640,360" href="about.html" alt="About GoalSeat">
         </map>
-        <figcaption>Click the image to open About Us</figcaption>
     </figure>
 
-    <article>
-        <section class="box">
-            <h2 class="login-title">Login</h2>
+    <div class="box">
+        <h2>Login</h2>
 
-            <form onsubmit="return validateLogin()">
-                <p>
-                    <label for="loginEmail">Email:</label>
-                    <input type="email" id="loginEmail" placeholder="example@gmail.com">
-                </p>
+        <form onsubmit="return validateLogin()">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" placeholder="example@gmail.com">
 
-                <p>
-                    <label for="loginPassword">Password:</label>
-                    <input type="password" id="loginPassword" placeholder="Enter your password">
-                </p>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password">
 
-                <p>
-                    <input type="submit" value="Login">
-                    <input type="reset" value="Reset">
-                </p>
-            </form>
+            <br>
 
-            <p id="loginMessage"></p>
-        </section>
-    </article>
+            <input type="submit" value="Login">
+        </form>
 
-    <footer>GoalSeat</footer>
+        <p id="loginMessage"></p>
+    </div>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

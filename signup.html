@@ -2,13 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalSeat - Signup</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-    <style type="text/css">
-        .signup-title {
+    <style>
+        .signup-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .signup-box {
+            width: 420px;
+            background: #2b2b2b;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #888;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
             color: lightblue;
             text-align: center;
+        }
+
+        .signup-box h2 {
+            color: lightblue;
+            margin-bottom: 25px;
+        }
+
+        .login-text {
+            margin-top: 25px;
+            color: lightblue;
+            text-align: center;
+        }
+
+        .login-text a {
+            color: lightblue;
         }
     </style>
 </head>
@@ -17,65 +46,52 @@
     <header>
         <h1>GoalSeat</h1>
 
-        <nav class="menu">
+        <div class="menu">
             <a href="home.html">Home</a> |
             <a href="login.html">Login</a> |
             <a href="signup.html">Signup</a> |
             <a href="about.html">About</a>
-        </nav>
+        </div>
     </header>
 
     <figure class="page-image-box">
-        <img class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="GoalSeat image">
+        <a href="about.html">
+            <img class="page-image" src="main-image.png" usemap="#aboutMap" alt="GoalSeat image">
+        </a>
+
         <map name="aboutMap">
-            <area shape="rect" coords="0,0,320,180" href="about.html" alt="About Us">
+            <area shape="rect" coords="0,0,640,360" href="about.html" alt="About GoalSeat">
         </map>
-        <figcaption>Click the image to open About Us</figcaption>
     </figure>
 
-    <article>
-        <section class="box">
-            <h2 class="signup-title">Create Account</h2>
+    <div class="signup-wrapper">
+        <div class="signup-box">
+            <h2>Create Account</h2>
 
-            <form onsubmit="return validateSignUp()">
-                <p>
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" placeholder="Your full name">
-                </p>
+            <form onsubmit="return validateSignUp()" class="signup-form">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" placeholder="Your full name">
 
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="example@gmail.com">
-                </p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
 
-                <p>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" placeholder="05xxxxxxxx">
-                </p>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="0551234567">
 
-                <p>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Enter password">
-                </p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
 
-                <p>
-                    <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" placeholder="Re-enter password">
-                </p>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" placeholder="Re-enter password">
 
-                <p>
-                    <input type="submit" value="Create Account">
-                    <input type="reset" value="Reset">
-                </p>
+                <input type="submit" value="Create Account" class="submit-btn">
             </form>
 
             <p id="signupMessage"></p>
-            <p>Already have an account? <a href="login.html">Login</a></p>
-        </section>
-    </article>
+            <p class="login-text">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
 
-    <footer>GoalSeat</footer>
-
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

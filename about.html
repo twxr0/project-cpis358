@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalSeat - About Us</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>GoalSeat</h1>
 
-        <nav class="menu">
+        <div class="menu">
             <a href="home.html">Home</a> |
             <a href="login.html">Login</a> |
             <a href="signup.html">Signup</a> |
             <a href="about.html">About</a>
-        </nav>
+        </div>
     </header>
 
     <figure class="page-image-box">
-        <img class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="GoalSeat image">
+        <a href="about.html">
+            <img class="page-image" src="AboutUs.png" usemap="#aboutMap" alt="About GoalSeat image">
+        </a>
+
         <map name="aboutMap">
-            <area shape="rect" coords="0,0,320,180" href="about.html" alt="About Us">
+            <area shape="rect" coords="0,0,640,360" href="about.html" alt="About GoalSeat">
         </map>
-        <figcaption>Click the image to open About Us</figcaption>
     </figure>
 
     <article>
-        <section class="box">
+        <section class="about-box">
             <h2>About Us</h2>
 
             <p>
@@ -52,14 +55,12 @@
 
             <button type="button" onclick="showTeamMessage()">Show Project Message</button>
 
-            <p id="teamMessage">
+            <p id="teamMessage" class="about-thanks">
                 Thank you for using GoalSeat!
             </p>
         </section>
     </article>
 
-    <footer>GoalSeat</footer>
-
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
